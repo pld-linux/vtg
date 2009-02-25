@@ -1,24 +1,24 @@
 Summary:	Vala tools for GEdit
 Name:		vtg
-Version:	0.1.0
+Version:	0.4.0
 Release:	1
 License:	LGPL v2+
 Group:		Applications
 Source0:	http://vtg.googlecode.com/files/%{name}-%{version}.tar.bz2
-# Source0-md5:	ee5d3bb83b65b5f040f2350f647ea99a
-URL:		http://www.paldo.org/vala/
+# Source0-md5:	2f52dd53276321ec6ab2358e0e3903d2
+URL:		http://vtg.googlecode.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gedit2-devel
 BuildRequires:	glib2-devel >= 1:2.12.0
-BuildRequires:	gnome-build-devel
 BuildRequires:	gtk+2-devel >= 2:2.10.0
 BuildRequires:	gtksourcecompletion-devel
 BuildRequires:	libtool
 BuildRequires:	libxslt-progs
 BuildRequires:	pkgconfig
+BuildRequires:	vala >= 0.5.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,3 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/gedit-2/plugins/libvtg.so
 %{_libdir}/gedit-2/plugins/vtg.gedit-plugin
 %{_datadir}/vtg
+%{_mandir}/man1/vala-gen-project.1*
