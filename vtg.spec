@@ -1,4 +1,5 @@
 Summary:	Vala tools for GEdit
+Summary(pl.UTF-8):	Narzędzia Vala dla GEdita
 Name:		vtg
 Version:	0.4.0
 Release:	1
@@ -24,6 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Tools for developing in Vala using GEdit.
 
+%description -l pl.UTF-8
+Narzędzia do programowania w języku Vala przy użyciu GEdita.
+
 %prep
 %setup -q
 
@@ -46,15 +50,11 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO NEWS TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/vtg/licenses
-%{_libdir}/gedit-2/plugins/libvtg.so
+%attr(755,root,root) %{_libdir}/gedit-2/plugins/libvtg.so
 %{_libdir}/gedit-2/plugins/vtg.gedit-plugin
 %{_datadir}/vtg
 %{_mandir}/man1/vala-gen-project.1*
