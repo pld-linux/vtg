@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README TODO NEWS TODO
+%doc AUTHORS ChangeLog README TODO NEWS
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/gedit-2/plugins/libvtg.so
 %{_libdir}/gedit-2/plugins/vtg.gedit-plugin
